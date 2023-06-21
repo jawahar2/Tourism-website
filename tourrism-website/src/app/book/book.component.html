@@ -1,0 +1,118 @@
+<div class="row" *ngIf="!booked">
+<div class="col-md-5 offset-md-1" >
+<div class="card-body" *ngFor="let destinations of array">
+<p-fieldset legend="Overview" [toggleable]="true" [collapsed]="true">
+    {{destinations.details.about}}
+
+</p-fieldset>
+<p-fieldset legend="Package Inclusions" [toggleable]="true" [collapsed]="true">
+    <ul>
+        <li *ngFor="let inc of destinations.details.itinerary.packageInclusions">
+            {{inc}}
+        </li>
+    </ul>
+    
+</p-fieldset>
+<p-fieldset legend="Itinerary" [toggleable]="true" [collapsed]="true">
+        <ul>
+            <li><h6>Day1</h6>
+                <div>
+                        {{destinations.details.itinerary.dayWiseDetails.firstDay}}
+                </div>
+            </li>
+            <li *ngFor="let n of numArr" >
+                <h6>Day{{n+2}}</h6>
+                <div>
+                        {{destinations.details.itinerary.dayWiseDetails.restDaysSightSeeing[n]}}
+                </div>
+            </li>
+            <li><h6>Day{{noOfDays}}</h6>
+                <div>
+                        {{destinations.details.itinerary.dayWiseDetails.lastDay}}
+                </div>
+        </ul>
+        <div class="text-danger">
+            **This itinerary is just a suggestion, itinerary can be modified as per requirement
+        </div>
+        <div>
+            <span>
+                    <button type="button" (click)="showModalDialog()" pButton icon="pi pi-external-link" label="Show"></button>
+                <p-dialog header="Godfather I" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <p>The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
+        His beloved son Michael has just come home from the war, but does not intend to become part of his father's business.
+        Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family,
+        kind and benevolent to those who give respect,
+        but given to ruthless violence whenever anything stands against the good of the family.</p>
+        <p-footer>
+            <button type="button" pButton icon="pi pi-check" (click)="displayModal=false" label="Yes"></button>
+            <button type="button" pButton icon="pi pi-times" (click)="displayModal=false" label="No" class="ui-button-secondary"></button>
+        </p-footer>
+</p-dialog>
+            </span>
+            <span class="text-danger">for more details</span>
+        </div>
+        
+    </p-fieldset>
+</div>
+</div>
+
+
+<div class="col-md-4">
+         <!-- <div class="card-body bg-secondary bg-light"> -->
+               <form [formGroup]="bookForm" (ngSubmit)="book()" class="form">
+                    <div class="form-group">
+                        <label for="uNo">Number of Travelers</label>        
+                        <input type="number" formControlName="No" id="uNo" class="form-control"> 
+                        <span class="error-message" *ngIf="bookForm.get('No').invalid && bookForm.get('No').dirty" class="text-danger">Enter number between 1 and 5</span>
+                    </div>
+                    <div class="form-group">
+                    <label for="ucal">Trip start date</label>
+                    <input type="date" formControlName="cal" (change)="charges()" id="ucal" class="form-control">
+                    <span class="error-message" *ngIf="bookForm.get('cal').invalid && bookForm.get('cal').dirty" class="text-danger">Enter a date greater than today</span>
+                    </div> 
+                    <!-- <div class="p-grid ui-fluid">
+                            <div class="p-col-12 p-md-4">
+                                <h3>Trip start date</h3>
+                                <p-calendar formControlName="cal" (change)="charges()" id="ucal" class="form-control"></p-calendar>
+                            </div>
+                    </div> -->
+                    <div>
+                        <label for="check"></label>Include flight charges
+                        <p-inputSwitch id="check" formControlName="plane" (click)="charges()" [(ngModel)]="checked"></p-inputSwitch>
+                    </div>
+                    <br>
+                    <span *ngIf="!bookForm.invalid">
+                            <div>
+                                    {{message1}}{{endmonth}} {{enddate | date: 'dd'}} {{enddate | date: 'yyyy'}}
+                            </div> 
+                            <div class="text-success">
+                                <h5>
+                                        {{message2}}{{totalAmount | currency}}
+                                </h5>
+                            </div>
+                    </span>
+                    <br>
+                    <button type="submit" [disabled]="bookForm.invalid" class="btn btn-primary" id="book">confirm booking</button>
+                </form>
+</div> 
+
+</div>
+
+<div *ngIf="booked">
+        <div class="row">
+                <div class="col-md-8 offset-2 ">
+                    <div class="card-body">
+                        <div><h3>
+                                Horray!! You Have successfully booked a trip
+                        </h3>
+                        </div>
+                        <div>
+                            <button class="btn btn-success" (click)="viewtrips()">CLICK HERE TO VIEW PLANNED TRIPS</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+</div>
+
+

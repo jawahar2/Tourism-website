@@ -1,0 +1,58 @@
+<div *ngIf="diag">
+<div class="row" *ngFor="let trips of ptripsarray">
+    <div class="col-md-6 offset-md-2">
+
+        <div class="card-head bg-dark text-light">
+                Booking ID:{{trips.bookingId}}
+        </div>
+    <div class="body bg-secondary text-dark">
+        <h5>{{trips.destinationName}}</h5>
+        <div>
+            Trip starts on: {{trips.checkInDate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fare Details
+        </div>
+        <div>
+                Trip starts on: {{trips.checkOutDate}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{trips.totalCharges | currency}}
+        </div>
+        <div>
+            Travellers: {{trips.noOfPersons}}&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+    <br>
+</div>
+
+</div>
+</div>
+
+    <div *ngIf="!loggedin">
+            <div class="row">
+                <div class="col-md-8 offset-2 ">
+                    <div class="card-body">
+                        <div><h3>
+                                Sorry You have not logged in yet!
+                        </h3>
+                        </div>
+                        <div>
+                            <button class="btn btn-success" (click)="login()">CLICK HERE TO LOGIN</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+        </div>
+
+        <div *ngIf="!diag">
+            <div *ngIf="loggedin" class="row">
+                <div class="col-md-8 offset-2 ">
+                    <div class="card-body">
+                        <div><h3>
+                                Sorry You dont have any bookings
+                        </h3>
+                        </div>
+                        <div>
+                            <button class="btn btn-success" (click)="book()">CLICK HERE TO BOOK</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+        </div>

@@ -1,0 +1,77 @@
+<div *ngIf="temp1">
+<div class="card-body" *ngFor="let destinations of array1">
+    <div class="row">
+        <div class="col-md-2">
+                <img src="../..{{destinations.imageUrl}}" alt="card image" class="package-image">
+        </div>
+        <div class="col-md-6 offset-md-1">
+                <div>
+                    <h4>{{destinations.name}}</h4>
+                </div>
+                <div>
+                    {{destinations.noOfNights}} Nights
+                </div>
+                <div class="discount" *ngIf="destinations.details.discount">
+                    {{destinations.details.discount}}
+                </div>
+                <div>
+                    {{destinations.details.about}}
+                </div>
+
+        </div>
+
+        <div class="col-md-3">
+                <br><br>
+            <h5 class="text-center">
+                Prices starting From:
+            </h5>
+            <div class="h6 text-center text-success">
+                {{destinations.chargesPerPerson|currency}}
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" id="book" (click)="book(destinations.destinationId)">BOOK</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br><br>
+
+</div>
+</div>
+
+
+<div *ngIf="!temp1">
+        <div class="row">
+            <div class="col-md-8 offset-2 ">
+                <div class="card-body">
+                    <div><h3>
+                            Sorry You have not logged in yet!
+                    </h3>
+                    </div>
+                    <div>
+                        <button class="btn btn-success" (click)="login()">CLICK HERE TO LOGIN</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    
+</div>
+
+<div *ngIf="!array1len">
+        <div class="row">
+            <div class="col-md-8 offset-2 ">
+                <div class="card-body">
+                    <div><h3>
+                            Sorry We dont have destinations that you have searched!
+                    </h3>
+                    </div>
+                    <div>
+                        <button class="btn btn-success" (click)="goback()">GO BACK</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    
+</div>

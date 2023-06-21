@@ -1,0 +1,72 @@
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:84:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:84:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:85:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:85:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:85:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:85:19
+MongooseError: Operation `User.deleteMany()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\HP\Desktop\testing\WS\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:198:23)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:85:19
+MongooseError: Operation `User.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\HP\Desktop\testing\WS\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:198:23)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+MongooseError: Operation `User.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\HP\Desktop\testing\WS\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:198:23)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+MongooseError: Operation `User.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\HP\Desktop\testing\WS\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:198:23)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: The contact number already exists
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:111:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:16:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:16:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:16:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Incorrect password
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:16:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Enter registered contact number! If not registered, please register
+    at C:\Users\HP\Desktop\testing\WS\src\service\userslogin.js:9:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:97:19
+Error: Could not connect to Database
+    at C:\Users\HP\Desktop\testing\WS\src\utilities\connections.js:86:19
+Error: Enter registered contact number! If not registered, please register
+    at C:\Users\HP\Desktop\Jawahar_tourism\WS\src\service\userslogin.js:9:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

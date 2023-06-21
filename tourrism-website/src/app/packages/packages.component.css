@@ -1,0 +1,45 @@
+.package-card{
+    padding:3%;
+    margin-left:5%;
+    margin-right:5%;
+    border: transparent;
+  }
+  .package-image{
+    width:300px;
+    height:200px;
+  }
+  .discount{
+    color:red;
+    font-size: 18px;
+  }
+  .destination{
+    margin-top: 10%;
+  }
+  .hotDeals-section, .details-section{
+    padding: 10rem 0;
+  }
+  .hotDeals-section .featured-text .details-section{
+    padding: 2rem;
+  }
+  .details-section .featured-text {
+    padding: 2rem;
+  }
+  .details-section{
+    background-color: white;
+  }
+  @media (min-width: 992px) {
+    .hotDeals-section .featured-text .details-section{
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #64a19d;
+    }
+  }
+  @media (min-width: 992px) {
+    .details-section .featured-text{
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #64a19d;
+      /* border-right: 0.5rem solid #64a19d; */
+    }
+  }
+  .discount{
+    font-weight: 600;
+   }
